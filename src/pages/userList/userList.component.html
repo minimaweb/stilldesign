@@ -1,0 +1,44 @@
+<h1>User list</h1>
+
+<button class="btn btn-default" (click)="onCreate()">Create user</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Introduction</th>
+    <th>Position</th>
+    <th>Active</th>
+    <th>CreatedAt</th>
+    <th>Avatar</th>
+    <th>Data</th>
+    <th>Companies</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users">
+    <td>{{ user.id }}</td>
+    <td>{{ user.firstName }}</td>
+    <td>{{ user.lastName }}</td>
+    <td>{{ user.email }}</td>
+    <td>{{ user.phone }}</td>
+    <td>{{ user.introduction }}</td>
+    <td>{{ user.position }}</td>
+    <td>{{ user.active }}</td>
+    <td>{{ user.createdAt }}</td>
+    <td>{{ user.avatar }}</td>
+    <td>{{ user.data }}</td>
+    <td>{{ user.companies }}</td>
+    <td>Actions</td>
+    <td>
+      <button class="btn btn-primary" (click)="onEdit(user.id)">Edit</button>
+      <button class="btn btn-danger" (click)="onDelete(user.id)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

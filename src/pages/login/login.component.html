@@ -1,0 +1,15 @@
+<h1>Login</h1>
+
+<form>
+  <div class="form-group">
+    <label for="email" class="control-label">Email</label>
+    <input type="email" class="form-control" placeholder="email@address.com" id="email" name="email" [(ngModel)]="email">
+  </div>
+
+  <div class="form-group">
+    <label for="password" class="control-label">Password</label>
+    <input type="password" class="form-control" placeholder="password" id="password" name="password" [(ngModel)]="password">
+  </div>
+
+  <button class="btn btn-primary" (click)="onLogin($event)">Login</button>
+</form>
